@@ -30,10 +30,10 @@ stages:
           docker login -u $(docker.username) -p $(docker.password)
           cd tutorial-part-four
           
-          echo -e "\033[0;32mDocker build and tag image as \"$(tag)\""
-          docker build . -t "$(tag)"
+          echo -e "\033[0;32mDocker build and tag image as \"donovanvanheerden/private:gatsby\""
+          docker build . -t "donovanvanheerden/private:gatsby"
 
-          echo -e "\033[0;32mDocker push image \"$(tag)\""
-          docker push "$(tag)"
+          echo -e "\033[0;32mDocker push image \"donovanvanheerden/private:gatsby\""
+          docker push "donovanvanheerden/private:gatsby"
       displayName: Docker Build & Push
    
