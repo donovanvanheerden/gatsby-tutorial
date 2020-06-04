@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  gatsby:
+    image: donovanvanheerden/private:gatsby
+    build:
+      context: .
+      dockerfile: Dockerfile
