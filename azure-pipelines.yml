@@ -28,6 +28,7 @@ stages:
         script: |
           echo -e "\033[0;32mDocker login..."
           docker login -u $(docker.username) -p $(docker.password)
+          cd tutorial-part-four
           
           echo -e "\033[0;32mDocker build and tag image as \"$(tag)\""
           docker build . -t "$(tag)"
