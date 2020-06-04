@@ -1,14 +1,14 @@
 #build
 FROM node:alpine as build
 
-COPY app/package.json /src/
+COPY package.json /src/
 
 WORKDIR /src
 RUN npm install
 
 RUN npm install -g gatsby-cli
 
-COPY app/ .
+COPY . .
 RUN npm run build
 
 # production
